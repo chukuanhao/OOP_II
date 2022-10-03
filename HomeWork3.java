@@ -9,7 +9,7 @@ public class HomeWork3 {
 
 class ticketClass implements Runnable{
     
-    static int AllTicket=100000;
+    static int AllTicket=10000;
     int tTicket;
     Thread t;
     int countTicket=0;
@@ -26,10 +26,9 @@ class ticketClass implements Runnable{
 
             if((AllTicket-tTicket)>=0){
                 AllTicket-=tTicket;
-                System.out.println(t.getName()+" buys "+tTicket+" tickets.");
+                System.out.println(t.getName()+" buys "+tTicket+" tickets. Left tickets: "+AllTicket);
                 countTicket+=tTicket;
             }else{
-                break;
             }
     
         }
